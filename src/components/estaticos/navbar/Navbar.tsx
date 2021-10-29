@@ -1,41 +1,53 @@
-import React from "react"
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import MenuIcon from '@material-ui/icons/Menu'
-import Search from '@material-ui/icons/Search'
-import { Box } from '@material-ui/system'
-import { InputAdornment, TextField } from '@material-ui/core'
-import "./Navbar.css"
-function Navbar(){
+import React from 'react';
+import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
+function Navbar() {
     return (
-    <>
-    <AppBar position="fixed" color="primary">
-    <Toolbar>
-        <MenuIcon />
-        <Typography variant="h6">
-            BlogPessoal
-        </Typography>
-        <Box ml="auto">
-            <TextField
-                id="input-with-icon-textfield"
+        <>
+            <AppBar position="fixed" className="cor-nav-bar">
+                <Toolbar variant="dense">
+                    <Box className="cursor">
+                        <Typography variant="h5" color="inherit">
+                            BlogPessoal
+                        </Typography>
+                    </Box>
 
-                InputProps={{
-                    startAdornment: (
-                        <InputAdornment position="start">
-                            <Search />
-                        </InputAdornment>
-                    ),
-                }}
-                variant="standard"
-            />
-        </Box>
-    </Toolbar>
-</AppBar>
-    </>
+                    <Box display="flex" justifyContent="start">
+                        <Box mx={1} className="cursor">
+                            <Typography variant="h6" color="inherit">
+                                home
+                            </Typography>
+                        </Box>
+                        <Box mx={1} className="cursor">
+                            <Typography variant="h6" color="inherit">
+                                postagens
+                            </Typography>
+                        </Box>
+                        <Box mx={1} className="cursor">
+                            <Typography variant="h6" color="inherit">
+                                temas
+                            </Typography>
+                        </Box>
+                        <Box mx={1} className="cursor">
+                            <Typography variant="h6" color="inherit">
+                                cadastrar tema
+                            </Typography>
+                        </Box>
+                        <Link to='/login' className='text-decorator-none'>
+                            <Box mx={1} className="cursor">
+                                <Typography variant="h6" color="inherit">
+                                    logout
+                                </Typography>
+                            </Box>
+                        </Link>
+                        
+                    </Box>
 
+                </Toolbar>
+            </AppBar>
+        </>
     )
-
 }
 
 export default Navbar;
