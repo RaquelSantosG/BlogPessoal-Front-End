@@ -1,6 +1,5 @@
 import React from "react";
 import {Typography, Box, Grid, Button} from "@material-ui/core";
-import TabPostagem from "../../components/postagens/tabpostagem/TabPostagem";
 import "./Home.css";
 
 function Home(){
@@ -20,10 +19,9 @@ function Home(){
 
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://www.revistabula.com/wp/wp-content/uploads/2019/12/livros-610x350.jpg" alt="" width="500px" height="500px" />
+                    <img src="https://i.pinimg.com/564x/da/d8/2f/dad82ff4ec83204f035339c8c6408ad3.jpg" alt="" width="450px" height="450px" />
                 </Grid>
                 <Grid xs={12} className="postagens">
-                    <TabPostagem />
                 </Grid>
             </Grid>
         </>

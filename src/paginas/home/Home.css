@@ -1,5 +1,5 @@
 .caixa{
-    background-color: blueviolet;
+    background-color: rgb(27, 215, 221);
 }
 
 .titulo{
@@ -8,11 +8,11 @@
 }
 
 .botao{
-     border-color: white !important;
+     border-color: black !important;
       background-color: black;
-      color: white !important;
+      color: black !important;
 }
 
 .postagens{
-    background-color: white;
+    background-color: rgb(8, 7, 7);
 }
