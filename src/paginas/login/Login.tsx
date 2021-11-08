@@ -8,7 +8,7 @@ import useLocalStorage from 'react-use-localstorage';
 
 function Login() {
     let history = useHistory();
-    const [token, setToken] = useLocalStorage('');
+    const [token, setToken] = useLocalStorage('token');
  
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
