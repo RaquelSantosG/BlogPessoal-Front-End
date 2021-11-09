@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import {Typography, Box, Grid, Button} from "@material-ui/core";
-import "./Home.css";
 import TabPostagem from "../../components/postagens/tabpostagem/TabPostagem";
 import { useHistory } from "react-router";
 import useLocalStorage from "react-use-localstorage";
+import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import "./Home.css";
+
 
 
 
@@ -29,13 +31,14 @@ function Home(){
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
+                        <ModalPostagem />
                         </Box>
                         <Button variant="outlined" className="botao">Ver Postagens</Button>
                     </Box>
 
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://i.pinimg.com/564x/da/d8/2f/dad82ff4ec83204f035339c8c6408ad3.jpg" alt="" width="450px" height="450px" />
+                    <img src="https://wpimages.mlabs.com.br/wp-content/uploads/2021/09/21121113/mlabs-agendamento-posts.png" alt="" width="450px" height="450px" />
                 </Grid>
                 <Grid xs={12} className="postagens"> 
                 <TabPostagem/>
