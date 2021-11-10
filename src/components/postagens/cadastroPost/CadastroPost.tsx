@@ -3,11 +3,12 @@ import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem,
 import './CadastroPost.css';
 import { useHistory, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
+import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 
 function CadastroPost() {
     let history = useHistory();
@@ -15,20 +16,20 @@ function CadastroPost() {
     const [temas, setTemas] = useState<Tema[]>([])
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      );
+    );
 
     useEffect(() => {
         if (token == "") {
             toast.error('Você precisa estar logado', {
-                position: "top-right",
+                position: 'top-right',
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: "colored",
+                theme: 'colored',
                 progress: undefined,
-            });  
+            });
             history.push("/login")
 
         }
@@ -61,7 +62,7 @@ function CadastroPost() {
     }, [id])
 
     async function getTemas() {
-        await busca("/tema", setTemas, {
+        await busca("/temas", setTemas, {
             headers: {
                 'Authorization': token
             }
@@ -96,15 +97,15 @@ function CadastroPost() {
                 }
             })
             toast.success('Postagem atualizada com sucesso', {
-                position: "top-right",
+                position: 'top-right',
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: "colored",
+                theme: 'colored',
                 progress: undefined,
-            });  
+            });
         } else {
             post(`/postagens`, postagem, setPostagem, {
                 headers: {
@@ -112,15 +113,15 @@ function CadastroPost() {
                 }
             })
             toast.success('Postagem cadastrada com sucesso', {
-                position: "top-right",
+                position: 'top-right',
                 autoClose: 2000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
                 draggable: false,
-                theme: "colored",
+                theme: 'colored',
                 progress: undefined,
-            });  
+            });
         }
         back()
 
@@ -142,7 +143,7 @@ function CadastroPost() {
                     <Select
                         labelId="demo-simple-select-helper-label"
                         id="demo-simple-select-helper"
-                        onChange={(e) => buscaId(`/tema/${e.target.value}`, setTema, {
+                        onChange={(e) => buscaId(`/temas/${e.target.value}`, setTema, {
                             headers: {
                                 'Authorization': token
                             }

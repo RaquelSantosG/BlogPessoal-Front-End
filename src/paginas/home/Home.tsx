@@ -16,8 +16,8 @@ import {toast} from 'react-toastify';
 function Home(){
 
     let history = useHistory();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
+       const token = useSelector<TokenState, TokenState["tokens"]>(
+     (state) => state.tokens
       );
     
     useEffect(() => {
