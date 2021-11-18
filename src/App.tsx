@@ -23,7 +23,7 @@ function App() {
   return (
     <Provider store={store}>
         <ToastContainer />
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Navbar />
         <Switch>
           <div style={{minHeight: "100vh"}}>
