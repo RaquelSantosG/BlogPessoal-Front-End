@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/blogRaquelDeploy/static/css/main.d403c952.chunk.css",
+    "main.js": "/blogRaquelDeploy/static/js/main.47e6ff05.chunk.js",
+    "main.js.map": "/blogRaquelDeploy/static/js/main.47e6ff05.chunk.js.map",
+    "runtime-main.js": "/blogRaquelDeploy/static/js/runtime-main.42928e67.js",
+    "runtime-main.js.map": "/blogRaquelDeploy/static/js/runtime-main.42928e67.js.map",
+    "static/css/2.58a45539.chunk.css": "/blogRaquelDeploy/static/css/2.58a45539.chunk.css",
+    "static/js/2.82d63b41.chunk.js": "/blogRaquelDeploy/static/js/2.82d63b41.chunk.js",
+    "static/js/2.82d63b41.chunk.js.map": "/blogRaquelDeploy/static/js/2.82d63b41.chunk.js.map",
+    "static/js/3.b9f0be2a.chunk.js": "/blogRaquelDeploy/static/js/3.b9f0be2a.chunk.js",
+    "static/js/3.b9f0be2a.chunk.js.map": "/blogRaquelDeploy/static/js/3.b9f0be2a.chunk.js.map",
+    "index.html": "/blogRaquelDeploy/index.html",
+    "static/css/2.58a45539.chunk.css.map": "/blogRaquelDeploy/static/css/2.58a45539.chunk.css.map",
+    "static/css/main.d403c952.chunk.css.map": "/blogRaquelDeploy/static/css/main.d403c952.chunk.css.map",
+    "static/js/2.82d63b41.chunk.js.LICENSE.txt": "/blogRaquelDeploy/static/js/2.82d63b41.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42928e67.js",
+    "static/css/2.58a45539.chunk.css",
+    "static/js/2.82d63b41.chunk.js",
+    "static/css/main.d403c952.chunk.css",
+    "static/js/main.47e6ff05.chunk.js"
+  ]
+}
